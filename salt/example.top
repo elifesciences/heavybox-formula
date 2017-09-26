@@ -71,6 +71,6 @@ base:
         #- elife.upstart-monitoring # part of elife.init
         #- elife.utils # part of elife.init. should this be part of elife.base ?
         - elife.uwsgi
-        - elife.vsftp
+        - elife.vsftpd
         - elife.yamldiff
         - heavybox
