@@ -46,7 +46,6 @@ base:
         - elife.nodejs7
         - elife.nodejs
         #- elife.no-more-daemon # investigate, remove
-        - elife.phantomjs
         # - elife.php5 # drop or move this into civi
         - elife.php7
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
