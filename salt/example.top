@@ -12,7 +12,6 @@ base:
         #- elife.deploy-user # part of elife.init
         #- elife.dhcp # part of elife.init
         - elife.drush
-        - elife.elasticsearch
         #- elife.environment-name # part of elife.init
         - elife.external-volume
         - elife.external-volume-srv
@@ -30,27 +29,22 @@ base:
         - elife.jenkins-scripts
         #- elife.known-hosts # part of elife.init
         #- elife.logging # part of elife.init
-        - elife.memcached
         - elife.mercurial
         #- elife.mysql57 # deprecated, replaced by elife.mysql-server in 16.04
         - elife.mysql-client
         - elife.mysql-server
         - elife.newrelic-infrastructure
-        - elife.newrelic-nginx
         - elife.newrelic-php
-        - elife.newrelic-python
-        - elife.newrelic-servers-removal
-        - elife.newrelic
+        #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.nginx-error-pages
         - elife.nginx-php7
         - elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
         - elife.nodejs6
-        - elife.nodejs7
-        - elife.nodejs
+        #- elife.nodejs7 # used in elife-xpub; for all other projects, support only the nodejs6 (which is LTS)
+        #- elife.nodejs # used in dashboard and elife-website, should be moved to dashboard or upgraded to nodejs6 (which is LTS)
         #- elife.no-more-daemon # investigate, remove
-        - elife.phantomjs
-        - elife.php5
+        # - elife.php5 # drop or move this into civi
         - elife.php7
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
@@ -63,8 +57,6 @@ base:
         #- elife.security # part of elife.init
         - elife.selenium
         - elife.smoke
-        - elife.solr-4
-        - elife.solr-5
         - elife.spectrum
         #- elife.ssmtp # investigate, remove
         - elife.swapspace
@@ -74,6 +66,6 @@ base:
         #- elife.upstart-monitoring # part of elife.init
         #- elife.utils # part of elife.init. should this be part of elife.base ?
         - elife.uwsgi
-        - elife.vsftp
+        - elife.vsftpd
         - elife.yamldiff
         - heavybox
