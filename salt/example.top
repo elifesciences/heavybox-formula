@@ -41,7 +41,7 @@ base:
         - elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
         - elife.nodejs6
-        - elife.nodejs7
+        #- elife.nodejs7 # used in elife-xpub; for all other projects, support only the nodejs6 (which is LTS)
         #- elife.nodejs # used in dashboard and elife-website, should be moved to dashboard or upgraded to nodejs6 (which is LTS)
         #- elife.no-more-daemon # investigate, remove
         # - elife.php5 # drop or move this into civi
