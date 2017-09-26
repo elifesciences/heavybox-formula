@@ -60,8 +60,6 @@ base:
         #- elife.security # part of elife.init
         - elife.selenium
         - elife.smoke
-        - elife.solr-4
-        - elife.solr-5
         - elife.spectrum
         #- elife.ssmtp # investigate, remove
         - elife.swapspace
