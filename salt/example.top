@@ -36,10 +36,8 @@ base:
         - elife.mysql-client
         - elife.mysql-server
         - elife.newrelic-infrastructure
-        - elife.newrelic-nginx
         - elife.newrelic-php
         #- elife.newrelic-python # needs some states to be specified in pillar to actually work
-        - elife.newrelic
         - elife.nginx-error-pages
         - elife.nginx-php7
         - elife.nginx
