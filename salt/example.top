@@ -38,8 +38,7 @@ base:
         - elife.newrelic-infrastructure
         - elife.newrelic-nginx
         - elife.newrelic-php
-        - elife.newrelic-python
-        - elife.newrelic-servers-removal
+        #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.newrelic
         - elife.nginx-error-pages
         - elife.nginx-php7
@@ -50,7 +49,7 @@ base:
         - elife.nodejs
         #- elife.no-more-daemon # investigate, remove
         - elife.phantomjs
-        - elife.php5
+        # - elife.php5 # drop or move this into civi
         - elife.php7
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
