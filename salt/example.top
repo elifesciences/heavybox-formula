@@ -12,7 +12,6 @@ base:
         #- elife.deploy-user # part of elife.init
         #- elife.dhcp # part of elife.init
         - elife.drush
-        - elife.elasticsearch
         #- elife.environment-name # part of elife.init
         - elife.external-volume
         - elife.external-volume-srv
@@ -30,7 +29,6 @@ base:
         - elife.jenkins-scripts
         #- elife.known-hosts # part of elife.init
         #- elife.logging # part of elife.init
-        - elife.memcached
         - elife.mercurial
         #- elife.mysql57 # deprecated, replaced by elife.mysql-server in 16.04
         - elife.mysql-client
