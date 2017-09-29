@@ -1,7 +1,8 @@
 # `heavybox` formula
 
 This repository contains instructions for installing and configuring the `heavybox`
-project.
+project. The purpose of this project is to test all default 
+[builder-base-formula](https://github.com/elifesciences/builder-base-formula) state files, together.
 
 This repository should be structured as any Saltstack formula should, but it 
 should also conform to the structure required by the [builder](https://github.com/elifesciences/builder) 
