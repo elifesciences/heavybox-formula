@@ -19,8 +19,8 @@ base:
         #- elife.forced-dns # part of elife.init
         - elife.galen
         - elife.gearman
+        - elife.docker
         - elife.goaws
-        - elife.golang
         #- elife.hostname # part of elife.init
         - elife.hub
         #- elife.init # this is 'elife' at the very top
