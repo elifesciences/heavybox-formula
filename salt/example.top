@@ -50,7 +50,6 @@ base:
         - elife.postfix
         - elife.postgresql
         - elife.proofreader-php
-        - elife.puli
         - elife.python3
         - elife.python
         - elife.redis-server
