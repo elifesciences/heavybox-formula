@@ -24,7 +24,8 @@ base:
         #- elife.hostname # part of elife.init
         - elife.hub
         #- elife.init # this is 'elife' at the very top
-        - elife.java8
+        # See https://github.com/elifesciences/jira-import/issues/4360
+        #- elife.java8
         - elife.java
         - elife.jenkins-scripts
         #- elife.known-hosts # part of elife.init
