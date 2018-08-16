@@ -15,7 +15,6 @@ base:
         #- elife.environment-name # part of elife.init
         - elife.external-volume
         - elife.external-volume-srv
-        - elife.fakes3
         #- elife.forced-dns # part of elife.init
         - elife.galen
         - elife.gearman
