@@ -17,7 +17,13 @@ base:
         - elife.external-volume-srv
         #- elife.forced-dns # part of elife.init
         - elife.galen
+        {% if salt['grains.get']('oscodename') == 'xenial' %}
+        # Gearman through the PPA doesn't work on 16.04, see:
+        # https://github.com/elifesciences/builder-base-formula/pull/172#issuecomment-417200967
+        #- elife.gearman
+        {% else %}
         - elife.gearman
+        {% %}
         - elife.docker
         - elife.goaws
         #- elife.hostname # part of elife.init
