@@ -23,7 +23,7 @@ base:
         #- elife.gearman
         {% else %}
         - elife.gearman
-        {% %}
+        {% endif %}
         - elife.docker
         - elife.goaws
         #- elife.hostname # part of elife.init
