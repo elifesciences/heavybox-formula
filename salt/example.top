@@ -36,7 +36,12 @@ base:
         #- elife.mysql57 # deprecated, replaced by elife.mysql-server in 16.04
         - elife.mysql-client
         - elife.mysql-server
+        # skip elife.newrelic-infrastructure on 18.04 until supported
+        {% if salt['grains.get']('oscodename') == 'bionic' %}
+        #- elife.newrelic-infrastructure
+        {% else %}
         - elife.newrelic-infrastructure
+        {% endif %}
         - elife.newrelic-php
         #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.nginx-error-pages
