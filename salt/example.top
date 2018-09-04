@@ -1,13 +1,12 @@
 base:
     '*':
-        - elife
+        - elife # 'elife.init'
         - elife.apache
         - elife.apache-php7
         - elife.aws-cli
         #- elife.backups # part of elife.init
         #- elife.base # part of elife.init
         #- elife.certificates # part of elife.apache and elife.nginx
-        #- elife.collectd # investigate, remove
         - elife.composer
         #- elife.daily-system-updates # part of elife.init
         #- elife.deploy-user # part of elife.init
@@ -18,24 +17,28 @@ base:
         - elife.external-volume-srv
         #- elife.forced-dns # part of elife.init
         - elife.galen
+
         {% if salt['grains.get']('oscodename') == 'xenial' %}
-        # Gearman through the PPA doesn't work on 16.04, see:
+        # disabled for 16.04 only: Gearman through the PPA doesn't work, see:
         # https://github.com/elifesciences/builder-base-formula/pull/172#issuecomment-417200967
         #- elife.gearman
         {% else %}
         - elife.gearman
         {% endif %}
+
         - elife.docker
         - elife.goaws
         #- elife.hostname # part of elife.init
         - elife.hub
         #- elife.init # this is 'elife' at the very top
+
         # See https://github.com/elifesciences/jira-import/issues/4360
         {% if salt['grains.get']('oscodename') == 'trusty' %}
         - elife.java
         {% else %}
         - elife.java8
         {% endif %}
+
         - elife.jenkins-scripts
         #- elife.known-hosts # part of elife.init
         #- elife.logging # part of elife.init
@@ -43,12 +46,14 @@ base:
         #- elife.mysql57 # deprecated, replaced by elife.mysql-server in 16.04
         - elife.mysql-client
         - elife.mysql-server
+
         # skip elife.newrelic-infrastructure on 18.04 until supported
         {% if salt['grains.get']('oscodename') == 'bionic' %}
         #- elife.newrelic-infrastructure
         {% else %}
         - elife.newrelic-infrastructure
         {% endif %}
+
         - elife.newrelic-php
         #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.nginx-error-pages
