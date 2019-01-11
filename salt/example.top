@@ -68,6 +68,7 @@ base:
         - elife.python3
         - elife.python
         - elife.redis-server
+        - elife.sidecars
         #- elife.security # part of elife.init
         #- elife.selenium # deprecated, Docker is used for Selenium now
         - elife.smoke
