@@ -31,11 +31,7 @@ base:
         - elife.hub
         #- elife.init # this is 'elife' at the very top
         # See https://github.com/elifesciences/jira-import/issues/4360
-        {% if salt['grains.get']('oscodename') == 'trusty' %}
-        - elife.java
-        {% else %}
-        - elife.java8
-        {% endif %}
+        - elife.openjdk8
         - elife.jenkins-scripts
         #- elife.known-hosts # part of elife.init
         #- elife.logging # part of elife.init
