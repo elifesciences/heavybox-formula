@@ -12,7 +12,6 @@ base:
         #- elife.daily-system-updates # part of elife.init
         #- elife.deploy-user # part of elife.init
         #- elife.dhcp # part of elife.init
-        - elife.drush
         #- elife.environment-name # part of elife.init
         - elife.external-volume
         - elife.external-volume-srv
