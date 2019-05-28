@@ -44,7 +44,9 @@ base:
         {% else %}
         - elife.newrelic-infrastructure
         {% endif %}
+        {% if salt['grains.get']('oscodename') != 'trusty' %}
         - elife.newrelic-php
+        {% endif %}
         #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.nginx-error-pages
         {% if salt['grains.get']('oscodename') != 'trusty' %}
