@@ -47,7 +47,9 @@ base:
         - elife.newrelic-php
         #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.nginx-error-pages
+        {% if salt['grains.get']('oscodename') != 'trusty' %}
         - elife.nginx-php7
+        {% endif %}
         - elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
         - elife.nodejs6
@@ -55,7 +57,9 @@ base:
         #- elife.nodejs # used in dashboard and elife-website, should be moved to dashboard or upgraded to nodejs6 (which is LTS)
         #- elife.no-more-daemon # investigate, remove
         # - elife.php5 # drop or move this into civi
+        {% if salt['grains.get']('oscodename') != 'trusty' %}
         - elife.php7
+        {% endif %}
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
         - elife.postgresql
