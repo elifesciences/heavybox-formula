@@ -2,7 +2,6 @@ base:
     '*':
         - elife
         - elife.apache
-        - elife.apache-php7
         - elife.aws-cli
         #- elife.backups # part of elife.init
         #- elife.base # part of elife.init
