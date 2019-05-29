@@ -1,3 +1,5 @@
+{% set osrelease = salt['grains.get']('osrelease') %}
+
 base:
     '*':
         - elife
@@ -15,7 +17,7 @@ base:
         - elife.external-volume-srv
         #- elife.forced-dns # part of elife.init
         - elife.galen
-        {% if salt['grains.get']('oscodename') == 'xenial' %}
+        {% if osrelease == '16.04' %}
         # Gearman through the PPA doesn't work on 16.04, see:
         # https://github.com/elifesciences/builder-base-formula/pull/172#issuecomment-417200967
         #- elife.gearman
@@ -37,17 +39,17 @@ base:
         - elife.mysql-client
         - elife.mysql-server
         # skip elife.newrelic-infrastructure on 18.04 until supported
-        {% if salt['grains.get']('oscodename') == 'bionic' %}
+        {% if osrelease == '18.04' %}
         #- elife.newrelic-infrastructure
         {% else %}
         - elife.newrelic-infrastructure
         {% endif %}
-        {% if salt['grains.get']('oscodename') != 'trusty' %}
+        {% if osrelease != '14.04' %}
         - elife.newrelic-php
         {% endif %}
         #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.nginx-error-pages
-        {% if salt['grains.get']('oscodename') != 'trusty' %}
+        {% if osrelease != '14.04' %}
         - elife.nginx-php7
         {% endif %}
         - elife.nginx
@@ -57,7 +59,7 @@ base:
         #- elife.nodejs # used in dashboard and elife-website, should be moved to dashboard or upgraded to nodejs6 (which is LTS)
         #- elife.no-more-daemon # investigate, remove
         # - elife.php5 # drop or move this into civi
-        {% if salt['grains.get']('oscodename') != 'trusty' %}
+        {% if osrelease != '14.04' %}
         - elife.php7
         {% endif %}
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
