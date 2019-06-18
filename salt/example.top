@@ -3,6 +3,7 @@
 base:
     '*':
         - elife
+        - elife.aws-credentials
         - elife.aws-cli
         #- elife.backups # part of elife.init
         #- elife.base # part of elife.init

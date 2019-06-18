@@ -2,6 +2,10 @@ heavybox:
     no: data
 
 elife:
+    aws:
+        access_key_id: AKIAFAKEFAKEFAKE
+        secret_access_key: 1234567890
+        region: us-east-1
     sidecars:
         containers:
             sftp:
