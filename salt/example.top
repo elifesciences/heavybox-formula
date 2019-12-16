@@ -39,7 +39,6 @@ base:
         #- elife.known-hosts # part of elife.init
         #- elife.logging # part of elife.init
         - elife.mercurial
-        #- elife.mysql57 # deprecated, replaced by elife.mysql-server in 16.04
         - elife.mysql-client
         - elife.mysql-server
         # skip elife.newrelic-infrastructure on 18.04 until supported
