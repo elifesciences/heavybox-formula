@@ -71,8 +71,7 @@ base:
         {% if osrelease != '14.04' %}
         - elife.proofreader-php
         {% endif %}
-        - elife.python3
-        - elife.python
+        #- elife.python # part of elife.init
         - elife.redis-server
         - elife.sidecars
         #- elife.security # part of elife.init
