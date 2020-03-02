@@ -24,7 +24,8 @@ base:
         # Gearman through the PPA doesn't work on 16.04, see:
         # https://github.com/elifesciences/builder-base-formula/pull/172#issuecomment-417200967
         #- elife.gearman
-        {% elif osrelease != '14.04' %}
+        {% else %} 
+        # 18.04+
         - elife.gearman
         {% endif %}
         - elife.docker
@@ -34,7 +35,7 @@ base:
         - elife.hub
         #- elife.init # this is 'elife' at the very top
         # See https://github.com/elifesciences/jira-import/issues/4360
-        - elife.openjdk8
+        - elife.java8
         - elife.jenkins-scripts
         #- elife.known-hosts # part of elife.init
         #- elife.logging # part of elife.init
@@ -47,28 +48,19 @@ base:
         {% else %}
         - elife.newrelic-infrastructure
         {% endif %}
-        {% if osrelease != '14.04' %}
         - elife.newrelic-php
-        {% endif %}
         #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.nginx-error-pages
-        {% if osrelease != '14.04' %}
         - elife.nginx-php7
-        {% endif %}
         - elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
         - elife.nodejs6
         #- elife.no-more-daemon # investigate, remove
-        # - elife.php5 # drop or move this into civi
-        {% if osrelease != '14.04' %}
         - elife.php7
-        {% endif %}
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
         - elife.postgresql
-        {% if osrelease != '14.04' %}
         - elife.proofreader-php
-        {% endif %}
         #- elife.python # part of elife.init
         - elife.redis-server
         - elife.sidecars
@@ -86,7 +78,5 @@ base:
         #- elife.utils # part of elife.init. should this be part of elife.base ?
         - elife.uwsgi
         - elife.vsftpd
-        {% if osrelease != '14.04' %}
         - elife.yamldiff
-        {% endif %}
         - heavybox
