@@ -1,1 +1,1 @@
-elifeFormula('heavybox', '', null, ['s1604', 's1804'])
+elifeFormula('heavybox', '', null, ['s1604', 'snsalt'])
