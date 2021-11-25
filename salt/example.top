@@ -7,7 +7,7 @@ base:
         - elife.aws-cli
         #- elife.backups # part of elife.init
         #- elife.base # part of elife.init
-        #- elife.certificates # part of elife.apache and elife.nginx
+        #- elife.certificates # part of elife.nginx
         #- elife.collectd # investigate, remove
         {% if osrelease != '14.04' %}
         - elife.composer
@@ -55,7 +55,6 @@ base:
         - elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
         - elife.nodejs6
-        #- elife.no-more-daemon # investigate, remove
         - elife.php7
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
@@ -72,7 +71,6 @@ base:
         #- elife.ssmtp # investigate, remove
         - elife.swapspace
         #- elife.syslog-ng # part of elife.init
-        - elife.telegraf
         #- elife.time-correction # part of elife.init
         #- elife.upstart-monitoring # part of elife.init
         #- elife.utils # part of elife.init. should this be part of elife.base ?
