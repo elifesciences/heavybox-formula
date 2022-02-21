@@ -53,7 +53,12 @@ base:
         - elife.nginx-php7
         - elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
+        {% if osrelease == '18.04' %}
+        # nodejs6 not available for 20.04
         - elife.nodejs6
+        {% else %}
+        - elife.nodejs
+        {% endif %}
         #- elife.no-more-daemon # investigate, remove
         - elife.php7
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
