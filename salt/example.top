@@ -57,7 +57,7 @@ base:
         # nodejs6 not available for 20.04
         - elife.nodejs6
         {% else %}
-        - elife.nodejs
+        - elife.nodejs16
         {% endif %}
         #- elife.no-more-daemon # investigate, remove
         - elife.php7
