@@ -59,7 +59,6 @@ base:
         {% else %}
         - elife.nodejs16
         {% endif %}
-        #- elife.no-more-daemon # investigate, remove
         - elife.php7
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
