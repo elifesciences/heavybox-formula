@@ -1,5 +1,3 @@
-{% set osrelease = salt['grains.get']('osrelease') %}
-
 base:
     '*':
         - elife
@@ -9,9 +7,7 @@ base:
         #- elife.base # part of elife.init
         #- elife.certificates # part of elife.apache and elife.nginx
         #- elife.collectd # investigate, remove
-        {% if osrelease != '14.04' %}
         - elife.composer
-        {% endif %}
         #- elife.daily-system-updates # part of elife.init
         #- elife.deploy-user # part of elife.init
         #- elife.dhcp # part of elife.init
@@ -19,15 +15,8 @@ base:
         - elife.external-volume
         - elife.external-volume-srv
         #- elife.forced-dns # part of elife.init
-        {% if osrelease == '16.04' %}
-        # Gearman through the PPA doesn't work on 16.04, see:
-        # https://github.com/elifesciences/builder-base-formula/pull/172#issuecomment-417200967
-        #- elife.gearman
-        {% else %} 
-        # 18.04+
         - elife.gearman
-        {% endif %}
-        - elife.docker
+        - elife.docker-native
         - elife.goaws
         #- elife.hostname # part of elife.init
         - elife.helm
@@ -41,24 +30,14 @@ base:
         - elife.mercurial
         - elife.mysql-client
         - elife.mysql-server
-        # skip elife.newrelic-infrastructure on 18.04 until supported
-        {% if osrelease == '18.04' %}
-        #- elife.newrelic-infrastructure
-        {% else %}
         - elife.newrelic-infrastructure
-        {% endif %}
         - elife.newrelic-php
         #- elife.newrelic-python # needs some states to be specified in pillar to actually work
         - elife.nginx-error-pages
         - elife.nginx-php7
         - elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
-        {% if osrelease == '18.04' %}
-        # nodejs6 not available for 20.04
-        - elife.nodejs6
-        {% else %}
         - elife.nodejs16
-        {% endif %}
         - elife.php7
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
