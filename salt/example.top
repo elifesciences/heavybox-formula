@@ -41,7 +41,7 @@ base:
         - elife.php7
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
-        - elife.postgresql
+        - elife.postgresql-12
         #- elife.proofreader-php # lsh@2022-01-21: disabled as composer 1 is going OOM 
         #- elife.python # part of elife.init
         - elife.redis-server
