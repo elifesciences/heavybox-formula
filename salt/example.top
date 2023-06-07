@@ -42,8 +42,6 @@ base:
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
         - elife.postgresql-12
-        #- elife.proofreader-php
-        - elife.rm-proofreader-php
         #- elife.python # part of elife.init
         - elife.redis-server
         - elife.sidecars
