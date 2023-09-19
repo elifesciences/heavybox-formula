@@ -30,7 +30,6 @@ base:
         - elife.mercurial
         - elife.mysql-client
         - elife.mysql-server
-        - elife.newrelic-php
         - elife.nginx-error-pages
         - elife.nginx-php7
         - elife.nginx
