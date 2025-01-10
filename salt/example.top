@@ -15,7 +15,6 @@ base:
         - elife.external-volume
         - elife.external-volume-srv
         #- elife.forced-dns # part of elife.init
-        - elife.gearman
         - elife.docker-native
         - elife.goaws
         #- elife.hostname # part of elife.init
