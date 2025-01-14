@@ -18,7 +18,6 @@ base:
         - elife.docker-native
         - elife.goaws
         #- elife.hostname # part of elife.init
-        - elife.helm
         - elife.hub
         #- elife.init # this is 'elife' at the very top
         # See https://github.com/elifesciences/issues/issues/4360
