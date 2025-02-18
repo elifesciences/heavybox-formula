@@ -6,6 +6,9 @@ elife:
         access_key_id: AKIAFAKEFAKEFAKE
         secret_access_key: 1234567890
         region: us-east-1
+    php:
+        version: 7.4
+        fpm: true
     sidecars:
         containers:
             sftp:

@@ -29,11 +29,10 @@ base:
         - elife.mysql-client
         - elife.mysql-server
         - elife.nginx-error-pages
-        - elife.nginx-php7
         - elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
         - elife.nodejs16
-        - elife.php7
+        - elife.php
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
         - elife.postgresql-12
