@@ -35,7 +35,7 @@ base:
         - elife.php
         - elife.postfix-ses # proxies mail from postfix to Amazon SES
         - elife.postfix
-        - elife.postgresql-13
+        - elife.postgresql-14
         #- elife.python # part of elife.init
         - elife.redis-server
         - elife.sidecars
