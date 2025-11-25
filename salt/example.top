@@ -5,7 +5,7 @@ base:
         - elife.aws-cli
         #- elife.backups # part of elife.init
         #- elife.base # part of elife.init
-        #- elife.certificates # part of elife.apache and elife.nginx
+        #- elife.certificates # part of elife.nginx
         #- elife.collectd # investigate, remove
         - elife.composer
         #- elife.daily-system-updates # part of elife.init
@@ -47,7 +47,6 @@ base:
         #- elife.ssmtp # investigate, remove
         - elife.swapspace
         #- elife.syslog-ng # part of elife.init
-        - elife.telegraf
         #- elife.time-correction # part of elife.init
         #- elife.upstart-monitoring # part of elife.init
         #- elife.utils # part of elife.init. should this be part of elife.base ?
