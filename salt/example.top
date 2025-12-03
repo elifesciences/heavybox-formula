@@ -5,6 +5,7 @@ base:
         - elife.aws-cli
         #- elife.backups # part of elife.init
         #- elife.base # part of elife.init
+        - elife.caddy
         #- elife.certificates # part of elife.nginx
         #- elife.collectd # investigate, remove
         - elife.composer
@@ -28,8 +29,9 @@ base:
         - elife.mercurial
         - elife.mysql-client
         - elife.mysql-server
-        - elife.nginx-error-pages
-        - elife.nginx
+        # Disabled in favour of testing caddy
+        #- elife.nginx-error-pages
+        #- elife.nginx
         #- elife.nginx-upgrade-http # investigate, remove
         - elife.nodejs16
         - elife.php
